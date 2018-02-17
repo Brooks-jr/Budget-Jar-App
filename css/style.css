@@ -1,0 +1,335 @@
+/* =============================================
+-                G E N E R A L
+============================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 700;
+}
+
+.clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+body {
+    color: #555;
+    font-family: Open Sans;
+    font-size: 16px;
+    position: relative;
+    height: 100vh;
+    font-weight: 400;
+    background-color: #fff;
+}
+
+.right {
+    float: right;
+}
+
+.red {
+    color: rgba(255, 80, 73, .4) !important;
+}
+
+.red:hover {
+    color: #ff5049 !important;
+}
+
+.expense {
+    border-bottom: 3px solid rgba(255, 80, 73, .4) !important;
+}
+
+.expense:focus, .expense:hover {
+    border-bottom: 3px solid #FF5049 !important;
+}
+
+/* =============================================
+-           T O P - S E C T I O N
+============================================= */
+
+.top {
+    height: 40vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.45)), url(../img/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+.budget {
+    position: absolute;
+    width: 350px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #fff;
+}
+
+.budget-title {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+sup {
+    font-size: 26px;
+}
+
+.budget-value {
+    font-size: 42px;
+    text-align: center;
+    margin-bottom: 25px;
+    letter-spacing: 1px;
+}
+
+.budget-value, .budget-title {
+    font-weight: 700;
+}
+
+.budget-income, .budget-expenses {
+    padding: 12px;
+    text-transform: uppercase;
+}
+
+.budget-income {
+    margin-bottom: 10px;
+    background-color: rgba(22, 160, 133, .85);
+}
+
+.budget-expenses {
+    background-color: rgba(171, 82, 85, .85);
+}
+
+.budget-income-text, .budget-expenses-text {
+    float: left;
+    font-size: 14px;
+    margin-top: 2px;
+}
+
+.budget-income-value, .budget-expenses-value {
+    letter-spacing: 1px;
+    float: left;
+    font-weight: 700;
+}
+
+.budget-income-percentage, .budget-expenses-percentage {
+    float: left;
+    width: 34px;
+    font-size: 11px;
+    padding: 3px 0;
+    margin-left: 10px;
+    font-weight: 700;
+}
+
+.budget-expenses-percentage {
+    background-color: rgba(255, 255, 255, 0.2);
+    text-align: center;
+}
+
+.budget-date {
+    color: #c7ba01;
+}
+
+/* logo */
+
+.logo {
+    position: absolute;
+    background-image: url(../img/budget-jar-logo/budget-jar-logo-large.png);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 290px;
+    height: 290px;
+    left: 4%;
+    top: 4%
+}
+
+/* =============================================
+-         B O T T O M - S E C T I O N
+============================================= */
+
+/* inputs */
+
+.bottom {
+    background-color: #fff;
+}
+
+.add-description, .add-value, .add-type, .add {
+    background-color: #fafafa;
+}
+
+.add-description, .add-value, .add-type {
+    border: none;
+    border-bottom: 3px solid rgba(131, 211, 212, 0.5);
+    color: rgb(148, 148, 148)!important;
+}
+
+.add-description:hover, .add-value:hover, .add-type:hover, .add-type:focus, .add-description:focus, .add-value:focus {
+    border-color: #28B9B5;
+}
+
+.add-type:focus, .add-description:focus, .add-value:focus {
+    outline: none;
+}
+
+.add {
+    padding: 14px 14px 28px 14px;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.02);
+}
+
+.add-container {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.add-type {
+    width: 55px;
+    height: 44px;
+    font-size: 18px;
+    color: inherit;
+    margin-right: 10px;
+    font-weight: 300;
+    transition: border 0.3s;
+}
+
+.add-description, .add-value {
+    color: inherit;
+    font-family: inherit;
+    font-size: 14px;
+    padding: 12px 15px;
+    margin-right: 10px;
+    transition: border 0.3s;
+}
+
+.add-description {
+    width: 400px;
+}
+
+.add-value {
+    width: 100px;
+}
+
+.add-button {
+    font-size: 35px;
+    background: none;
+    border: none;
+    color: rgba(131, 211, 212, 0.5);
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1.1;
+    margin-left: 10px;
+}
+
+.add-button:active {
+    transform: translateY(2px);
+}
+
+.add-button:focus {
+    outline: none;
+}
+
+/* incomes & exspenses lists */
+
+.container {
+    width: 1000px;
+    margin: 60px auto;
+}
+
+.income {
+    margin-right: 50px;
+}
+
+.expenses, .income {
+    float: left;
+    width: 475px;
+}
+
+h2 {
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.income-title, .add-button:hover, .income .item-value, .income .item-delete-button {
+    color: #28B9B5;
+}
+
+.income-title, .expenses-title {
+    font-weight: 700;
+}
+
+.item {
+    padding: 13px;
+    border-bottom: 1px solid #e7e7e7;
+}
+
+.item:first-child {
+    border-top: 1px solid #e7e7e7;
+}
+
+.item:nth-child(even) {
+    background-color: #fafafa;
+}
+
+.item-description {
+    float: left;
+}
+
+.item-value {
+    float: left;
+    transition: transform 0.3s;
+}
+
+.item-percentage {
+    float: left;
+    margin-left: 20px;
+    transition: transform 0.3s;
+    font-size: 11px;
+    background-color: #FFDAD9;
+    padding: 3px;
+    width: 32px;
+    text-align: center;
+}
+
+.expenses .item-value, .expenses-title, .expenses .item-percentage, .expenses .item-delete-button {
+    color: #FF5049;
+}
+
+.item-delete {
+    float: left;
+}
+
+.item-delete-button {
+    font-size: 22px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 1;
+    display: none;
+}
+
+.item-delete-button:focus {
+    outline: none;
+}
+
+.item-delete-button:active {
+    transform: translateY(2px);
+}
+
+.item:hover .item-delete-button {
+    display: block;
+}
+
+.item:hover .item-percentage, .item:hover .item-value {
+    transform: translateX(-20px);
+}
+
+sup.small {
+    font-size: 14px;
+}
